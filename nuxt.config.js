@@ -37,7 +37,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/element-ui'
+    '~/plugins/element-ui',
   ],
   /*
   ** Auto import components
