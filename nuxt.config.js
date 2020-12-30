@@ -27,14 +27,17 @@ export default {
   },
   /*
   ** Global CSS
+  全局css样式引入
   */
   css: [
+    'element-ui/lib/theme-chalk/index.css'
   ],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/element-ui'
   ],
   /*
   ** Auto import components
@@ -45,6 +48,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+
   ],
   /*
   ** Nuxt.js modules
@@ -56,5 +60,6 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    vendor:['element-ui']
   }
 }

@@ -9,7 +9,14 @@
     "export": "nuxt export",
     "serve": "nuxt serve"
   },
+  "config": {
+    "nuxt": {
+      "host": "localhost",
+      "port": "3000"
+    }
+  },
   "dependencies": {
+    "element-ui": "^2.14.1",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {}
