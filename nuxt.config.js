@@ -15,7 +15,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: '这是利用seo优化的标题',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -50,10 +50,16 @@ export default {
   buildModules: [
 
   ],
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: 'https://api.nuxtjs.dev'
+    }
+  },
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
   /*
   ** Build configuration

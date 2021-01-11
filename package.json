@@ -16,8 +16,9 @@
     }
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.5",
     "element-ui": "^2.14.1",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {}
 }
