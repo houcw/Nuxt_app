@@ -7,6 +7,7 @@
 <script>
 import axios from "axios";
 import $api from '../axios/apiConfig'
+
 export default {
   data(){
     return{
