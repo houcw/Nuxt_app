@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <div>
-      <nuxt-link to="/">首页</nuxt-link>
-      <nuxt-link to="/home/home">首页1</nuxt-link>
-    </div>
+    数据中新
   </div>
 </template>
 

@@ -1,20 +1,29 @@
 <template>
   <div>
-    <Nuxt />
+    <el-container>
+      <el-aside class="leftNav" style="width:200px">
+        <div style="height:60px"></div>
+        <div>
+          <nuxt-link to="/">数据中心</nuxt-link>
+          <nuxt-link to="/home/home">首页1</nuxt-link>
+        </div>
+      </el-aside>
+      <el-container>
+        <el-header style="text-align:right;background:red">
+      <span>王小虎</span>
+        </el-header>
+        <el-main>
+          <Nuxt />
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -30,33 +39,14 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.topHeader {
+  width: 100%;
+  height: 50px;
+  background: red;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.leftNav {
+background-color: rgb(238, 241, 246)
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.centBox {
 }
 </style>
