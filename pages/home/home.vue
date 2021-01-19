@@ -1,21 +1,18 @@
 <template>
   <div>
-    <h1>这是首页的{{ infor.title }}</h1>
-    <ul>
-      <li  v-for="(item,index) in listData" :key="index">日期--{{item.businessDay}}</li>
-    </ul>
+    <h1>数据：{{infor}}</h1>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import $api from '../axios/apiConfig'
 export default {
   data(){
     return{
       infor:{
-        title:'测试列表'
-      },
-      listData:[]
+        
+      }
     }
   },
   mounted(){
@@ -23,8 +20,8 @@ export default {
   },
   methods:{
     getData(){
-      axios.get('https://innjoy-test-pms.innjoysmart.com/api/pms-finance/bill/cashBasis/?pageSize=15&pageCurrent=1&hotelId=BB1566204880897&channel=50').then(res=>{
-        this.listData = res.data.data.records
+      axios.get($api.baseUrl+'/admin/login?userName=123').then(res=>{
+        this.infor = res.data.data
       })
     }
   }

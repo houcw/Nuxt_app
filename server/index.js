@@ -28,5 +28,5 @@ app.use('/admin',admin);
 // 商品模块
 app.use('/goods',goods);
 
-app.listen(3000,()=>console.log('服务器启动成功'))
+app.listen(3001,()=>console.log('服务器启动成功'))
 
