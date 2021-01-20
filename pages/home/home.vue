@@ -11,6 +11,8 @@ import $api from '../axios/apiConfig'
 export default {
   data(){
     return{
+
+      
       infor:{
         
       }
