@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
-    数据中心
+  <div class="home">
+    <div class="banner">banner区域</div>
+    首页
   </div>
 </template>
 
@@ -28,6 +29,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.home{
+  margin: -8px;
+  .banner{
+    height: 100px;
+    background: red;
+  }
+}
 
 </style>

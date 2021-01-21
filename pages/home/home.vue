@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>数据：{{infor}}</h1>
+    <div>数据展示：{{infor}}</div>
   </div>
 </template>
 
@@ -31,5 +31,5 @@ export default {
 };
 </script>
 
-<style>
+<style lang='scss' scoped>
 </style>

@@ -1,26 +1,43 @@
 <template>
   <div>
-    <el-container>
-      <el-aside class="leftNav" style="width:200px">
-        <div style="height:60px"></div>
-        <div>
-          <nuxt-link to="/">数据中心</nuxt-link>
-          <nuxt-link to="/home/home">首页1</nuxt-link>
-        </div>
-      </el-aside>
-      <el-container>
-        <el-header style="text-align:right;background:red">
-      <span>王小虎</span>
-        </el-header>
-        <el-main>
-          <Nuxt />
-        </el-main>
-      </el-container>
-    </el-container>
+    <div>
+      <Nuxt />
+    </div>
+    <!-- 底部导航 -->
+    <div class="bottomTab">
+      <div
+        class="tabItem"
+        v-for="(item, index) in tabList"
+        :key="index"
+        @click="selectTab(item.path)"
+      >
+        {{ item.name }}
+      </div>
+    </div>
   </div>
 </template>
-
-<style>
+<script>
+export default {
+  data() {
+    return {
+      tabList: [
+        { path: "/", name: "首页" },
+        { path: "/home/home", name: "商品列表" },
+        { path: "/car/car", name: "购物车" },
+        { path: "/account/account", name: "我的" },
+      ],
+    };
+  },
+  mounted() {},
+  methods: {
+    selectTab(path) {
+      this.$router.push(path);
+    },
+    handleClose() {},
+  },
+};
+</script>
+<style  scoped>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -32,21 +49,25 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
 }
-.topHeader {
-  width: 100%;
+.bottomTab {
+  position: absolute;
   height: 50px;
-  background: red;
+  width: 100%;
+  background: gray;
+  bottom: 0;
+  left: 0;
+  line-height: 50px;
 }
-.leftNav {
-background-color: rgb(238, 241, 246)
-}
-.centBox {
+.tabItem {
+  height: 50px;
+  float: left;
+  text-align: center;
+  width: 25%;
 }
 </style>

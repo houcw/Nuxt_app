@@ -1,5 +1,7 @@
 <template>
-  <div>这是我的</div>
+  <div>
+      购物车
+  </div>
 </template>
 
 <script>
