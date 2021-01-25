@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div>数据展示：{{infor}}</div>
+    <div class="goods" v-for="(item,index) in infor" :key="index">
+      <p>{{item.name}}</p>
+      <h1>{{item.price}}</h1>
+
+    </div>
   </div>
 </template>
 
@@ -11,11 +15,7 @@ import $api from '../axios/apiConfig'
 export default {
   data(){
     return{
-
-      
-      infor:{
-        
-      }
+      infor:[]
     }
   },
   mounted(){
@@ -23,8 +23,8 @@ export default {
   },
   methods:{
     getData(){
-      axios.get($api.baseUrl+'/admin/login?userName=123').then(res=>{
-        this.infor = res.data.data
+      axios.get($api.baseUrl+'/goods/goodslist').then(res=>{
+        this.infor = res.data
       })
     }
   }
@@ -32,4 +32,10 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.goods{
+  width:125px ;
+  height: 100px;
+  border: 1px solid gray;
+  float: left;
+}
 </style>

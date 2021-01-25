@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss">
 .home{
-  margin: -8px;
   .banner{
     height: 100px;
     background: red;

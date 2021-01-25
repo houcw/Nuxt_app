@@ -1,6 +1,7 @@
 
 const express = require('express')
 const bodyParser = require('body-parser'); 
+// 连接数据
 const app = express()
 
 //设置跨域访问
@@ -22,6 +23,10 @@ app.use(bodyParser.json());
 // 配置路由模块
 const admin = require('./router/admin');
 const goods = require('./router/goods');
+
+
+
+
 
 // 管理权限模块
 app.use('/admin',admin);
